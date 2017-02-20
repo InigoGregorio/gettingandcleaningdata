@@ -2,6 +2,8 @@
 
 # Load packages neeeded
 library(dtplyr)
+library(data.table)
+library(dplyr)
 
 # Download, unzip, path and list files
 fileurl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
@@ -72,5 +74,5 @@ meandataset <- summarise(dataset, mean = mean(value))
 # Create csv files and get their paths
 if(!file.exists("meandataset.txt")) {file.create("meandataset.txt")}
 meandatasetfile <- file.path(getwd(), "meandataset.txt")
-# Write data tables as csv
-write.csv(meandataset, meandatasetfile, row.names = FALSE)
+# Write data tables as a txt file
+write.table(meandataset, meandatasetfile, row.names = FALSE)
