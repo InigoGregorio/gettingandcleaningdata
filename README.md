@@ -11,3 +11,4 @@ Project conducted for the assignemnt in Coursera
 ## Output produced
 
 - meandataset.csv: a csv file with the tidy data set with the means for each subject, activity and variable identify
+- run_analysis.R: contains the code and the proper explanations to use it
