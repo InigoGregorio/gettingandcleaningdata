@@ -1,0 +1,31 @@
+---
+title: "Codebook"
+output: 
+    md_document: 
+        variant: markdown_github
+---
+
+# Codebook
+
+This codebook was generated to explain the data set produced as output using "run_analysis.R".
+
+## Variables description
+
+- subjectid: integer referring to the subject observed
+- activityname: char vector that identifies the activity being performed when the measure was taken
+- featurename: char vector that identifies the measure taken
+- mean: double that captures the mean of the values taken for that measure (feature) in that subject in that activity 
+
+## Some rows
+
+```{r}
+load(".Rdata")
+head(meandataset)
+```
+
+## Summary statistics
+
+```{r}
+summary(meandataset)
+```
+
