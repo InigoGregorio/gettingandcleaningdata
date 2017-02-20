@@ -70,8 +70,8 @@ dataset <- group_by(dataset, subjectid, activityname, featurename)
 # Summarise the mean per group and create and independent, tidy data set
 meandataset <- summarise(dataset, mean = mean(value))
 
-# Save data set into a csv file
-# Create csv files and get their paths
+# Save data set into a txt file
+# Create txt files and get their paths
 if(!file.exists("meandataset.txt")) {file.create("meandataset.txt")}
 meandatasetfile <- file.path(getwd(), "meandataset.txt")
 # Write data tables as a txt file
